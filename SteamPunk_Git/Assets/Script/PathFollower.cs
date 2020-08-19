@@ -92,7 +92,5 @@ public class PathFollower : MonoBehaviour
                 gear--;
             }
         }
-
-        Debug.Log(gear);
     }
 }

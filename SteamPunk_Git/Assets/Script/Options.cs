@@ -46,7 +46,6 @@ public class Options : MonoBehaviour
     public void Unpause()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Debug.Log("sozai");
         Time.timeScale = 1f;
         optionpanel.SetActive(false);
         GamePaused = false;
