@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hptext: {fileID: 1153139830}
-  condition: {fileID: 0}
+  condition: {fileID: 1579982568}
   victory: 0
   victorypanel: {fileID: 1386513}
   win: {fileID: 1621831607}

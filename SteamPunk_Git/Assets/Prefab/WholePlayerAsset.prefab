@@ -409,6 +409,7 @@ MonoBehaviour:
   scopeOverlay: {fileID: 0}
   mainCamera: {fileID: 5539282729067278479}
   weaponCamera: {fileID: 993798303}
+  sniperDamage: 10
   scopedFOV: 15
 --- !u!1 &5539282730094314222
 GameObject:

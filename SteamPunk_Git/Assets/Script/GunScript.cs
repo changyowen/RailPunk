@@ -10,6 +10,7 @@ public class GunScript : MonoBehaviour
     public Camera mainCamera;
     public GameObject weaponCamera;
 
+    public int sniperDamage = 10;
     public float scopedFOV = 15f;
     private float normalFOV;
     private bool isScoped = false;
@@ -64,5 +65,38 @@ public class GunScript : MonoBehaviour
     void Shoot()
     {
         muzzleFlash.Play();
+        RaycastHit hit; 
+        if(Physics.Raycast(mainCamera.transform.position,mainCamera.transform.forward,out hit))
+        {
+            Debug.Log(hit.transform.name);
+            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+            if (target.tag == "Enemy")
+            {
+                Debug.Log("hit");
+                target.takeDamage(sniperDamage);
+            }
+            else
+            {
+                Debug.Log("miss"); 
+            }
+        }
+
+        //Vector3 point = new Vector3(mainCamera.pixelWidth / 3, mainCamera.pixelHeight / 3, 0);
+        //Ray ray = mainCamera.ScreenPointToRay(point);
+        //RaycastHit hit;
+        //if (Physics.Raycast(ray, out hit))
+        //{
+        //    GameObject hitObject = hit.transform.gameObject;
+        //    Debug.Log(hitObject.name);
+
+        //    if (hitObject.tag == "Enemy")
+        //    {
+        //        Debug.Log("hit"); 
+        //        EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+        //        target.takeDamage(sniperDamage);
+        //    }
+
+
+        //}
     }
 }
