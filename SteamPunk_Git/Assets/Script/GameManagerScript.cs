@@ -6,7 +6,7 @@ public class GameManagerScript : MonoBehaviour
 {
     public GameObject small_robot;
 
-    public bool spawnRobot = true;
+    public bool endwave = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,18 +17,23 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("escape"))
-        {
-            Application.Quit();
-        } 
+
     }
 
     IEnumerator SpawnRobot()
     {
-        while(spawnRobot == true)
+        for(int i = 1; i < 20; i++)
         {
             Instantiate(small_robot, new Vector3(14f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(4f);
         }
+
+        for (int i = 1; i < 20; i++)
+        {
+            Instantiate(small_robot, new Vector3(4f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(24f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
+            yield return new WaitForSeconds(4f);
+        }
+
     }
 }

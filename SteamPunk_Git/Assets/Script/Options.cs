@@ -53,14 +53,12 @@ public class Options : MonoBehaviour
 
     public void MainMenu()
     {
-        Debug.Log("Main menu");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void ExitGame()
     {
-        Debug.Log("die");
         Time.timeScale = 1f;
         Application.Quit();
     }
