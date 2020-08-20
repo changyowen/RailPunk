@@ -4,31 +4,21 @@ using UnityEngine;
 
 public class Robot_movement : MonoBehaviour
 {
+    public Transform partToRotate;
     public bool moving = true;
+    private float minionSpeed = 18f;
+    private float rotation = 0;
     Rigidbody rb;
-    // Update is called once per frame
-    void Start()
-    {
-        //StartCoroutine(Moving());
-    }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        while (moving == true)
+        if(moving == true)
         {
+            rotation += 2f;
+            partToRotate.transform.localRotation = Quaternion.Euler(rotation, 0, 0);
             rb = GetComponent<Rigidbody>();
-            rb.velocity = new Vector3(0, 10, 0);
-            //yield return new WaitForSeconds(.2f);
+            rb.velocity = new Vector3(0, 0, -minionSpeed);
         }
     }
-
-    //IEnumerator Moving()
-    //{
-    //    while(moving == true)
-    //    {
-    //        rb = GetComponent<Rigidbody>();
-    //        rb.velocity = new Vector3(0, 10, 0);
-    //        //yield return new WaitForSeconds(.2f);
-    //    }
-    //}
 }
