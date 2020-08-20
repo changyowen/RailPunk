@@ -9,6 +9,7 @@ public class TeslaTowerScript : MonoBehaviour
 
     [Header("Attribute")]
     public float range = 200f;
+    public float attack = 5f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
     public GameObject lightningBolt, lightningEnd;
@@ -70,11 +71,14 @@ public class TeslaTowerScript : MonoBehaviour
 
     public void Shoot()
     {
-        Debug.Log("Shoot!");
         lightningEnd.transform.position = target.transform.position;
         lightningBolt.GetComponent<LightningBoltScript>().Trigger();
-        lightningBolt.GetComponent<LightningBoltScript>().Trigger();
-        lightningBolt.GetComponent<LightningBoltScript>().Trigger();
+
+        EnemyHealth enemyhealth = target.GetComponent<EnemyHealth>();
+        if (enemyhealth != null)
+        {
+            enemyhealth.EnemyHp -= attack;
+        }
     }
 
     void OnDrawGizmosSelected()
