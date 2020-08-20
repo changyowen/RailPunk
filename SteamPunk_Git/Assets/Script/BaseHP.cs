@@ -25,14 +25,17 @@ public class BaseHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(basehitpoint == 0)
+        victory = condition.endwave;
+        if (basehitpoint == 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             victorypanel.SetActive(true);
             lose.SetActive(true);
         }
 
         if(victory == true && basehitpoint > 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             victorypanel.SetActive(true);
             win.SetActive(true);
         }
@@ -50,6 +53,7 @@ public class BaseHP : MonoBehaviour
 
     public void MainMenu()
     {
+        Cursor.lockState = CursorLockMode.None;
         victorypanel.SetActive(false);
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
@@ -57,6 +61,7 @@ public class BaseHP : MonoBehaviour
 
     public void ExitGame()
     {
+        Cursor.lockState = CursorLockMode.None;
         victorypanel.SetActive(false);
         Time.timeScale = 1f;
         Application.Quit();

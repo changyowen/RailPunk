@@ -34,6 +34,10 @@ public class GameManagerScript : MonoBehaviour
             Instantiate(small_robot, new Vector3(24f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
             yield return new WaitForSeconds(4f);
         }
-
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if(enemies.Length == 0)
+        {
+            endwave = true;
+        }
     }
 }
