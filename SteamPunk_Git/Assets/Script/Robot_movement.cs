@@ -5,19 +5,30 @@ using UnityEngine;
 public class Robot_movement : MonoBehaviour
 {
     public bool moving = true;
-
+    Rigidbody rb;
     // Update is called once per frame
     void Start()
     {
-        StartCoroutine(Moving());
+        //StartCoroutine(Moving());
     }
 
-    IEnumerator Moving()
+    private void Update()
     {
-        while(moving == true)
+        while (moving == true)
         {
-            GetComponent<Rigidbody>().AddForce(0, 0, -100f);
-            yield return new WaitForSeconds(.2f);
+            rb = GetComponent<Rigidbody>();
+            rb.velocity = new Vector3(0, 10, 0);
+            //yield return new WaitForSeconds(.2f);
         }
     }
+
+    //IEnumerator Moving()
+    //{
+    //    while(moving == true)
+    //    {
+    //        rb = GetComponent<Rigidbody>();
+    //        rb.velocity = new Vector3(0, 10, 0);
+    //        //yield return new WaitForSeconds(.2f);
+    //    }
+    //}
 }
