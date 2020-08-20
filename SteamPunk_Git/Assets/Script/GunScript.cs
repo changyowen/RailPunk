@@ -81,22 +81,5 @@ public class GunScript : MonoBehaviour
             }
         }
 
-        //Vector3 point = new Vector3(mainCamera.pixelWidth / 3, mainCamera.pixelHeight / 3, 0);
-        //Ray ray = mainCamera.ScreenPointToRay(point);
-        //RaycastHit hit;
-        //if (Physics.Raycast(ray, out hit))
-        //{
-        //    GameObject hitObject = hit.transform.gameObject;
-        //    Debug.Log(hitObject.name);
-
-        //    if (hitObject.tag == "Enemy")
-        //    {
-        //        Debug.Log("hit"); 
-        //        EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-        //        target.takeDamage(sniperDamage);
-        //    }
-
-
-        //}
     }
 }
