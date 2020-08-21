@@ -14,6 +14,8 @@ public class PathFollower2 : MonoBehaviour
     int whichPath = 0;
     int direction = 1;
 
+    public GameObject arrow1, arrow2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -102,11 +104,15 @@ public class PathFollower2 : MonoBehaviour
             case true:
                 {
                     gear = 1;
+                    arrow1.SetActive(true);
+                    arrow2.SetActive(false);
                     break;
                 }
             case false:
                 {
                     gear = -1;
+                    arrow1.SetActive(false);
+                    arrow2.SetActive(true);
                     break;
                 }
         }
