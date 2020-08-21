@@ -68,16 +68,18 @@ public class GunScript : MonoBehaviour
         RaycastHit hit; 
         if(Physics.Raycast(mainCamera.transform.position,mainCamera.transform.forward,out hit))
         {
-            Debug.Log(hit.transform.name);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            if (target.tag == "Enemy")
+            if(target != null)
             {
-                Debug.Log("hit");
-                target.takeDamage(sniperDamage);
-            }
-            else
-            {
-                Debug.Log("miss"); 
+                if (target.tag == "Enemy")
+                {
+                    Debug.Log("hit");
+                    target.takeDamage(sniperDamage);
+                }
+                else
+                {
+                    Debug.Log("miss");
+                }
             }
         }
 

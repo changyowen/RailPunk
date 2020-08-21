@@ -61,7 +61,6 @@ public class TeslaSwitch : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             enableSwitch = true;
-            Debug.Log("Yes");
         }
         
     }
