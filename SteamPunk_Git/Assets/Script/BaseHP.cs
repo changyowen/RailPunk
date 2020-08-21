@@ -9,14 +9,16 @@ public class BaseHP : MonoBehaviour
     int basehitpoint = 10;
     public Text hptext;
     public GameManagerScript condition;
-    public bool victory;
+    public Stage2Spawning condition2;
+    public bool[] victory = new bool [2];
     public GameObject victorypanel, win, lose;
     public Collider basecollider;
 
     // Start is called before the first frame update
     void Start()
     {
-        victory = condition.endwave;
+        victory[0] = condition.endwave;
+        victory[1] = condition2.endwave;
         victorypanel.SetActive(false);
         win.SetActive(false);
         lose.SetActive(false);
@@ -25,20 +27,24 @@ public class BaseHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        victory = condition.endwave;
+        victory[0] = condition.endwave;
+        victory[1] = condition2.endwave;
         if (basehitpoint == 0)
         {
             Cursor.lockState = CursorLockMode.None;
             victorypanel.SetActive(true);
             lose.SetActive(true);
         }
-
-        if(victory == true && basehitpoint > 0)
+        for(int i  = 0;i<2;i++)
         {
-            Cursor.lockState = CursorLockMode.None;
-            victorypanel.SetActive(true);
-            win.SetActive(true);
+            if(victory[i] == true && basehitpoint > 0)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                victorypanel.SetActive(true);
+                win.SetActive(true);
+            }
         }
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -50,7 +56,17 @@ public class BaseHP : MonoBehaviour
             Destroy(other.gameObject); 
         }
     }
+    public void NextStage()
+    {
+        {
+            int x = SceneManager.GetActiveScene().buildIndex;
+            Cursor.lockState = CursorLockMode.None;
+            victorypanel.SetActive(false);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(x+1);
+        }
 
+    }
     public void MainMenu()
     {
         Cursor.lockState = CursorLockMode.None;
