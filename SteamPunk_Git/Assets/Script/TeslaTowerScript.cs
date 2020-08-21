@@ -14,6 +14,8 @@ public class TeslaTowerScript : MonoBehaviour
     private float fireCountdown = 0f;
     public GameObject lightningBolt, lightningEnd;
     Transform firePoint;
+    public GameObject SwitchPosition;
+    TeslaSwitch teslaSwitch;
 
     [Header("Unity Setup Field")]
     public string enemyTag = "Enemy";
@@ -21,6 +23,8 @@ public class TeslaTowerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        teslaSwitch = SwitchPosition.GetComponent<TeslaSwitch>();
+
         firePoint = transform;
 
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -60,12 +64,15 @@ public class TeslaTowerScript : MonoBehaviour
             return;
         }
 
-        if (fireCountdown <= 0f)
+        if(teslaSwitch.switchOn == true)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            if (fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
         }
-
+       
         fireCountdown -= Time.deltaTime;
     }
 
