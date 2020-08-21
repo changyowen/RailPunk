@@ -11,9 +11,11 @@ public class GunScript : MonoBehaviour
     public GameObject weaponCamera;
 
     public int sniperDamage = 10;
+    public float fireRate = 1f;
     public float scopedFOV = 15f;
     private float normalFOV;
     private bool isScoped = false;
+    private float nextTimeToFire = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,16 +26,25 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
+            nextTimeToFire = Time.time + fireRate;
             Shoot();
+
+            if(isScoped == true)
+            {
+                isScoped = false;
+                weaponHolderAnimator.SetBool("Scoped", false);
+                OnUnscoped();
+            }
         }
-        if(Input.GetButtonDown("Fire2"))
+
+        if(Input.GetButtonDown("Fire2") && Time.time >= nextTimeToFire)
         {
             isScoped = !isScoped;
             weaponHolderAnimator.SetBool("Scoped", isScoped);
 
-            if(isScoped)
+            if (isScoped)
             {
                 StartCoroutine(OnScoped());
             }

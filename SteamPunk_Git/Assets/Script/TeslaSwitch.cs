@@ -20,7 +20,7 @@ public class TeslaSwitch : MonoBehaviour
     public Light mainLight, switchLight;
 
     public AudioSource switchSound;
-    AudioClip SwitchSoundOn;
+    AudioClip SwitchSoundOn, SwitchSoundOff;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,7 @@ public class TeslaSwitch : MonoBehaviour
         switchAnimator = GetComponent<Animator>();
 
         SwitchSoundOn = Resources.Load<AudioClip>("SwitchSoundOn");
+        SwitchSoundOff = Resources.Load<AudioClip>("SwitchSoundOff");
 
         MainSphere.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         switchSphere.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
@@ -112,6 +113,8 @@ public class TeslaSwitch : MonoBehaviour
     void TurnSwitchOff()
     {
         switchAnimator.SetBool("SwitchOn", false);
+        switchSound.clip = SwitchSoundOff;
+        switchSound.Play();
         switchOn = false;
         ElectricSphere.SetActive(false);
 
