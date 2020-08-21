@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunScript : MonoBehaviour
 {
     public ParticleSystem muzzleFlash;
+    public AudioSource SniperAudioSource;
     public Animator weaponHolderAnimator;
     public GameObject scopeOverlay;
     public Camera mainCamera;
@@ -75,6 +76,7 @@ public class GunScript : MonoBehaviour
 
     void Shoot()
     {
+        SniperAudioSource.Play();
         muzzleFlash.Play();
         RaycastHit hit; 
         if(Physics.Raycast(mainCamera.transform.position,mainCamera.transform.forward,out hit))
