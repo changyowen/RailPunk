@@ -34,7 +34,7 @@ public class Stage2Spawning : MonoBehaviour
 
         for (int i = 1; i < 10; i++)
         {
-            Instantiate(robot_bike, new Vector3(14f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(robot_bike, new Vector3(14f, 67.8f, 475f), Quaternion.Euler(0f, 180f, 0f));
             yield return new WaitForSeconds(5f);
         }
 

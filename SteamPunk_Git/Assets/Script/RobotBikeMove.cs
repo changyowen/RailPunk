@@ -15,10 +15,11 @@ public class RobotBikeMove : MonoBehaviour
     {
         if (moving == true)
         {
-            //rotation += 2f;
-            //partToRotate.transform.localRotation = Quaternion.Euler(rotation, 0, 0);
+            rotation += 4f;
+            partToRotate.transform.localRotation = Quaternion.Euler(rotation, 0, 0);
             rb = GetComponent<Rigidbody>();
             rb.velocity = new Vector3(0, 0, -minionSpeed);
+
         }
     }
 }
