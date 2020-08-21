@@ -19,10 +19,15 @@ public class TeslaSwitch : MonoBehaviour
     public GameObject[] SmallSphere;
     public Light mainLight, switchLight;
 
+    public AudioSource switchSound;
+    AudioClip SwitchSoundOn;
+
     // Start is called before the first frame update
     void Start()
     {
         switchAnimator = GetComponent<Animator>();
+
+        SwitchSoundOn = Resources.Load<AudioClip>("SwitchSoundOn");
 
         MainSphere.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         switchSphere.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
@@ -75,7 +80,9 @@ public class TeslaSwitch : MonoBehaviour
 
     IEnumerator TurnSwitchOn()
     {
-        yield return new WaitForSeconds(.7f);
+        switchSound.clip = SwitchSoundOn;
+        switchSound.Play();
+        yield return new WaitForSeconds(.9f);
         switchOn = true;
         ElectricSphere.SetActive(true);
 
@@ -111,7 +118,7 @@ public class TeslaSwitch : MonoBehaviour
         mainLight.intensity = 0;
         switchLight.intensity = 0;
 
-        if (this.gameObject.name.Contains("Tesla_Tower_A"))
+        if (TeslaTowerMainBody.name.Contains("Tesla_Tower_A"))
         {
             MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * .5f);
             switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * .5f);
@@ -120,13 +127,13 @@ public class TeslaSwitch : MonoBehaviour
                 SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * .5f);
             }
         }
-        else if (this.gameObject.name.Contains("Tesla_Tower_B"))
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_B"))
         {
-            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * .5f);
-            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * .5f);
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 3f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 3f);
             for (int i = 1; i < 4; i++)
             {
-                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * .5f);
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 3f);
             }
         }
     }
