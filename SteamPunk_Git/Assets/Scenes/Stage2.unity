@@ -2313,8 +2313,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: NextStage
+      - m_Target: {fileID: 1351077418}
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2891,7 +2891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1024346297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2993,6 +2993,7 @@ MonoBehaviour:
   robot_bike: {fileID: 919132149155446097, guid: bf9beac1db7ff6746a4e42378b9b0778,
     type: 3}
   endwave: 0
+  SpawnEnd: 0
 --- !u!4 &1151941662
 Transform:
   m_ObjectHideFlags: 0
@@ -3364,11 +3365,12 @@ MonoBehaviour:
   hptext: {fileID: 1485789491}
   condition: {fileID: 0}
   condition2: {fileID: 1151941661}
-  victory: 
-  victorypanel: {fileID: 0}
-  win: {fileID: 0}
-  lose: {fileID: 0}
+  victory: 0
+  victorypanel: {fileID: 1024346296}
+  win: {fileID: 560400347}
+  lose: {fileID: 1699978014}
   basecollider: {fileID: 1351077420}
+  index: 0
 --- !u!54 &1351077419
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4211,7 +4213,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1351077418}
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -5264,7 +5266,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1351077418}
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -5674,7 +5676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2092461175
 Transform:
   m_ObjectHideFlags: 0

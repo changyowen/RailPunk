@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour
     public GameObject small_robot;
 
     public bool endwave = false;
+    public bool SpawnEnd = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,10 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(SpawnEnd==true)
+        {
+            CheckEnemy();
+        }
 
     }
 
@@ -34,10 +39,16 @@ public class GameManagerScript : MonoBehaviour
             Instantiate(small_robot, new Vector3(24f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
             yield return new WaitForSeconds(4f);
         }
+        SpawnEnd = true;
+    }
+
+    void CheckEnemy()
+    {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if(enemies.Length == 0)
+        if (enemies.Length == 0)
         {
             endwave = true;
         }
     }
+
 }

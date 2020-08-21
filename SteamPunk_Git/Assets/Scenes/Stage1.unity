@@ -3779,6 +3779,7 @@ MonoBehaviour:
   small_robot: {fileID: 1957259210327591796, guid: 51f8759904d33dc43b07a3035717ccc0,
     type: 3}
   endwave: 0
+  SpawnEnd: 0
 --- !u!4 &1579982569
 Transform:
   m_ObjectHideFlags: 0
@@ -3810,7 +3811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1598288167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4310,11 +4311,12 @@ MonoBehaviour:
   hptext: {fileID: 842704836}
   condition: {fileID: 1579982568}
   condition2: {fileID: 0}
-  victory: 
+  victory: 0
   victorypanel: {fileID: 1598288166}
   win: {fileID: 464816520}
   lose: {fileID: 253312829}
   basecollider: {fileID: 1869261055}
+  index: 0
 --- !u!54 &1869261054
 Rigidbody:
   m_ObjectHideFlags: 0

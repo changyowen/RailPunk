@@ -10,15 +10,23 @@ public class BaseHP : MonoBehaviour
     public Text hptext;
     public GameManagerScript condition;
     public Stage2Spawning condition2;
-    public bool[] victory = new bool [2];
+    public bool victory;
     public GameObject victorypanel, win, lose;
     public Collider basecollider;
+    public int index;
 
     // Start is called before the first frame update
     void Start()
     {
-        victory[0] = condition.endwave;
-        victory[1] = condition2.endwave;
+        index = SceneManager.GetActiveScene().buildIndex;
+        if(index == 2)
+        {
+            victory = condition.endwave;
+        }
+        else if(index == 3)
+        {
+            victory = condition2.endwave;
+        }
         victorypanel.SetActive(false);
         win.SetActive(false);
         lose.SetActive(false);
@@ -27,23 +35,27 @@ public class BaseHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        victory[0] = condition.endwave;
-        victory[1] = condition2.endwave;
+        if (index == 2)
+        {
+            victory = condition.endwave;
+        }
+        else if (index == 3)
+        {
+            victory = condition2.endwave;
+        }
         if (basehitpoint == 0)
         {
             Cursor.lockState = CursorLockMode.None;
             victorypanel.SetActive(true);
             lose.SetActive(true);
         }
-        for(int i  = 0;i<2;i++)
+        if(victory == true && basehitpoint > 0)
         {
-            if(victory[i] == true && basehitpoint > 0)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                victorypanel.SetActive(true);
-                win.SetActive(true);
-            }
+            Cursor.lockState = CursorLockMode.None;
+            victorypanel.SetActive(true);
+            win.SetActive(true);
         }
+
 
     }
 
