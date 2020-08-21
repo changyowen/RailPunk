@@ -3707,10 +3707,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1151941660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d52eb045dae4fb468400578bcf7e042, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b45f42cf7ced71499218f9b67780cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   small_robot: {fileID: 1957259210327591796, guid: 51f8759904d33dc43b07a3035717ccc0,
+    type: 3}
+  robot_bike: {fileID: 919132149155446097, guid: bf9beac1db7ff6746a4e42378b9b0778,
     type: 3}
   endwave: 0
 --- !u!4 &1151941662
@@ -4160,7 +4162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hptext: {fileID: 671530167}
-  condition: {fileID: 1151941661}
+  condition: {fileID: 0}
   victory: 0
   victorypanel: {fileID: 2048482592}
   win: {fileID: 684767856}
