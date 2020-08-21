@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     float small_robot_hp = 5;
+    float robot_bike_hp = 10;
     public float EnemyHp;
 
     // Start is called before the first frame update
@@ -14,6 +15,11 @@ public class EnemyHealth : MonoBehaviour
         {
             EnemyHp = small_robot_hp;
         }
+        else if (this.name.Contains("Robot_Bike"))
+        {
+            EnemyHp = robot_bike_hp;
+        }
+
     }
 
     // Update is called once per frame
