@@ -8,6 +8,7 @@ public class PathFollower : MonoBehaviour
     public PathCreator pathCreator1, pathCreator2, pathCreator3;
     public EndOfPathInstruction end;
     float speed = 3;
+    bool gearForward = true;
     int gear = 0;
     float dstTravelled;
     int whichPath = 0;
@@ -20,8 +21,7 @@ public class PathFollower : MonoBehaviour
         direction = 1;
         dstTravelled = 1f;
 
-        speed = 3;
-        gear = 0;
+        speed = 10;
     }
 
     void FixedUpdate()
@@ -78,19 +78,23 @@ public class PathFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gear < 3)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                gear++;
-            }
+            gearForward = !gearForward;
         }
-        if (gear > -3)
+
+        switch(gearForward)
         {
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                gear--;
-            }
+            case true:
+                {
+                    gear = 1;
+                    break;
+                }
+            case false:
+                {
+                    gear = -1;
+                    break;
+                }
         }
     }
 }
