@@ -46,12 +46,14 @@ public class BaseHP : MonoBehaviour
         if (basehitpoint == 0)
         {
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0f;
             victorypanel.SetActive(true);
             lose.SetActive(true);
         }
         if(victory == true && basehitpoint > 0)
         {
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0f;
             victorypanel.SetActive(true);
             win.SetActive(true);
         }

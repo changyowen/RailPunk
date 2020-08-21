@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 62355252443773373}
   - component: {fileID: 8635064288771913046}
   - component: {fileID: 7600564657759921827}
+  - component: {fileID: -5231581287925865718}
   m_Layer: 0
   m_Name: Robot_Bike_holder
   m_TagString: Enemy
@@ -83,6 +84,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 2
   m_CollisionDetection: 0
+--- !u!114 &-5231581287925865718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223521577567280789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7aaac71bfcee746952fec996394287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHp: 0
 --- !u!1 &1704615340056521579
 GameObject:
   m_ObjectHideFlags: 0
