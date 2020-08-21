@@ -22,6 +22,8 @@ public class TeslaSwitch : MonoBehaviour
     public AudioSource switchSound;
     AudioClip SwitchSoundOn, SwitchSoundOff;
 
+    public GameObject SwitchIntruction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,8 @@ public class TeslaSwitch : MonoBehaviour
         }
 
         ElectricSphere.SetActive(false);
+
+        SwitchIntruction.SetActive(false);
     }
 
     // Update is called once per frame
@@ -66,6 +70,10 @@ public class TeslaSwitch : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            if(Time.time >= nextTimeToSwitch)
+            {
+                SwitchIntruction.SetActive(true);
+            }
             enableSwitch = true;
         }
         
@@ -75,6 +83,7 @@ public class TeslaSwitch : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            SwitchIntruction.SetActive(false);
             enableSwitch = false;
         }
     }
