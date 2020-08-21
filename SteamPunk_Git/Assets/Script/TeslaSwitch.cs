@@ -54,7 +54,6 @@ public class TeslaSwitch : MonoBehaviour
                 }
             }
         }
-        Debug.Log(switchOn);
     }
 
     void OnTriggerEnter(Collider other)
@@ -62,7 +61,9 @@ public class TeslaSwitch : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             enableSwitch = true;
+            Debug.Log("Yes");
         }
+        
     }
 
     void OnTriggerExit(Collider other)
