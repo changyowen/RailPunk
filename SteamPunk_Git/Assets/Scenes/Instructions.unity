@@ -964,8 +964,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "shoots \nthe gun"
+  m_Text: "Shoots the \nmain gun"
 --- !u!222 &313169478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1240,8 +1240,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1410,7 +1410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &581732344
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1853,8 +1853,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1865,10 +1865,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1. protect the base preventing its hp from reaching 0
+  m_Text: '1.  Protect the base preventing its hp from reaching 0
 
-    2. utilize
-    inactive towers to defend'
+    2. Utilize
+    tesla towers to defend'
 --- !u!222 &720599131
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2139,8 +2139,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2151,7 +2151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: turn the player to the opposite direction
+  m_Text: Turns the player to the opposite direction
 --- !u!222 &859731421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2347,8 +2347,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2510,8 +2510,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2522,9 +2522,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'portals
+  m_Text: 'Portals
 
-    teleport to the portal of same colour'
+    Teleports players to a portal of a same colour'
 --- !u!222 &1167375109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2550,7 +2550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1181367231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2648,7 +2648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177.20001, y: -24.523987}
+  m_AnchoredPosition: {x: 177.20001, y: -8.8}
   m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184938062
@@ -2671,8 +2671,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2683,9 +2683,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'base hp
+  m_Text: 'Base HP
 
-    game over if reaches 0'
+    Game over once it reaches 0'
 --- !u!222 &1184938063
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2751,7 +2751,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -2763,7 +2763,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: interact with levers and buttons to activate towers
+  m_Text: 'Let the player to interact with levers to activate
+
+    tesla towers'
 --- !u!222 &1210791420
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2829,8 +2831,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2841,9 +2843,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'the base
+  m_Text: 'Player''s base
 
-    once enemy reaches it reduce one hp'
+    Loses 1 HP when an enemy enters it.'
 --- !u!222 &1265204543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3029,8 +3031,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3041,9 +3043,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'activate
-
-    scope
+  m_Text: 'Activates scope
 
 '
 --- !u!222 &1465908237
@@ -3111,21 +3111,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 50
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'tesla
+  m_Text: 'Tesla Towers
 
-    press E near lever to activate for 20 seconds'
+    Press E when near levers to activate them'
 --- !u!222 &1545906259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3749,8 +3749,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 15
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -4115,8 +4115,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 5753ba838772cb648980c0cfdda3b5c8, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4127,7 +4127,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Opens the menu
+  m_Text: Opens the menu and pauses the game
 --- !u!222 &2104781091
 CanvasRenderer:
   m_ObjectHideFlags: 0
