@@ -27,17 +27,17 @@ public class GameManagerScript : MonoBehaviour
 
     IEnumerator SpawnRobot()
     {
-        for(int i = 1; i < 20; i++)
+        for(int i = 1; i < 15; i++)
         {
             Instantiate(small_robot, new Vector3(14f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(5f);
         }
 
-        for (int i = 1; i < 20; i++)
+        for (int i = 1; i < 15; i++)
         {
             Instantiate(small_robot, new Vector3(4f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
             Instantiate(small_robot, new Vector3(24f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(7f);
         }
         SpawnEnd = true;
     }

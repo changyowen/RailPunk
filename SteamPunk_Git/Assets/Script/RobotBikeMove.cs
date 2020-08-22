@@ -6,7 +6,7 @@ public class RobotBikeMove : MonoBehaviour
 {
     public Transform partToRotate;
     public bool moving = true;
-    private float minionSpeed = 25f;
+    private float minionSpeed = 50f;
     private float rotation = 0;
     Rigidbody rb;
 
