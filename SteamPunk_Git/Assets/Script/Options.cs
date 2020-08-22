@@ -11,12 +11,14 @@ public class Options : MonoBehaviour
     public static bool GamePaused = false;
     public Toggle musicToggle;
     public AudioSource musicSource;
+    Animator panelHolder;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        optionpanel.SetActive(false);
+        panelHolder = GetComponent<Animator>();
+        optionpanel.SetActive(true);
     }
 
     // Update is called once per frame
@@ -30,16 +32,18 @@ public class Options : MonoBehaviour
             }
             else
             {
-                Pause();
+                panelHolder.SetBool("OpenOption", true);
+                StartCoroutine(Pause());
             }
         }
     }
-    public void Pause()
+    IEnumerator Pause()
     {
+        yield return new WaitForSeconds(.25f);
         Cursor.lockState = CursorLockMode.None;
         Debug.Log("Paused");
         Time.timeScale = 0f;
-        optionpanel.SetActive(true);
+        
         GamePaused = true;
     }
 
@@ -47,8 +51,8 @@ public class Options : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
-        optionpanel.SetActive(false);
         GamePaused = false;
+        panelHolder.SetBool("OpenOption", false);
     }
 
     public void MainMenu()
