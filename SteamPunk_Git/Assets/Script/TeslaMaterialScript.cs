@@ -6,11 +6,14 @@ public class TeslaMaterialScript : MonoBehaviour
 {
     Color RedColor = Color.red;
     Color BlueColor = new Color(0f, 0.188f, 1f, 1f);
+    Color DullRed = new Color(.5f, 0f, 0f, 1f);
+    Color DullBlue = new Color(0f, .5f, 1f, 1f);
 
     public GameObject MainSphere, switchSphere, switchBody;
     public GameObject[] SmallSphere;
     public GameObject electricSphere, lightningBolt;
     public Light mainLight, switchLight;
+    public GameObject mainTowerIcon, switchIcon;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +48,10 @@ public class TeslaMaterialScript : MonoBehaviour
 
             mainLight.color = RedColor;
             switchLight.color = RedColor;
+
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullRed;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullRed;
+
         }
         else if(this.gameObject.name.Contains("Tesla_Tower_B"))
         {
@@ -73,6 +80,9 @@ public class TeslaMaterialScript : MonoBehaviour
 
             mainLight.color = new Color(0f, 0.639f, 1f, 1f);
             switchLight.color = new Color(0f, 0.639f, 1f, 1f);
+
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullBlue;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullBlue;
         }
     }
 

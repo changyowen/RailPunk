@@ -12,12 +12,16 @@ public class TeslaSwitch : MonoBehaviour
 
     Color RedColor = Color.red;
     Color BlueColor = new Color(0f, 0.188f, 1f, 1f);
+    Color DullRed = new Color(.4f, 0f, 0f, 1f);
+    Color BrightBlue = new Color(0f, 1f, 1f, 1f);
+    Color DullBlue = new Color(0f, .5f, 1f, 1f);
 
     public GameObject TeslaTowerMainBody;
     public GameObject MainSphere, switchSphere;
     public GameObject ElectricSphere;
     public GameObject[] SmallSphere;
     public Light mainLight, switchLight;
+    public GameObject mainTowerIcon, switchIcon;
 
     public AudioSource switchSound;
     AudioClip SwitchSoundOn, SwitchSoundOff;
@@ -107,6 +111,8 @@ public class TeslaSwitch : MonoBehaviour
             {
                 SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * 10f);
             }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = RedColor;
+            switchIcon.GetComponent<SpriteRenderer>().color = RedColor;
         }
         else if(TeslaTowerMainBody.name.Contains("Tesla_Tower_B"))
         {
@@ -116,6 +122,8 @@ public class TeslaSwitch : MonoBehaviour
             {
                 SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 10f);
             }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = BrightBlue;
+            switchIcon.GetComponent<SpriteRenderer>().color = BrightBlue;
         }
     }
 
@@ -138,6 +146,8 @@ public class TeslaSwitch : MonoBehaviour
             {
                 SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * .5f);
             }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullRed;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullRed;
         }
         else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_B"))
         {
@@ -147,6 +157,8 @@ public class TeslaSwitch : MonoBehaviour
             {
                 SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 3f);
             }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullBlue;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullBlue;
         }
     }
 }

@@ -10,6 +10,14 @@ public class RobotBikeMove : MonoBehaviour
     private float rotation = 0;
     Rigidbody rb;
 
+    public GameObject Icon;
+    Quaternion IconRotation;
+
+    void Awake()
+    {
+        IconRotation = Icon.transform.rotation;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,5 +29,10 @@ public class RobotBikeMove : MonoBehaviour
             rb.velocity = new Vector3(0, 0, -minionSpeed);
 
         }
+    }
+
+    void LateUpdate()
+    {
+        Icon.transform.rotation = IconRotation;
     }
 }
