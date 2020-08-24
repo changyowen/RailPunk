@@ -21,7 +21,7 @@ public class EnemyPortal : MonoBehaviour
         if(col.tag == "Enemy")
         {
             Vector3 currentposition = col.gameObject.transform.position; 
-            col.gameObject.transform.position = new Vector3(currentposition.x, currentposition.y, -110f);
+            col.gameObject.transform.position = new Vector3(currentposition.x, currentposition.y, -130f);
         }
     }
 }

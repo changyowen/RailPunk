@@ -16,6 +16,7 @@ public class GunScript : MonoBehaviour
     public float scopedFOV = 15f;
     private float normalFOV;
     private bool isScoped = false;
+    private bool scopING = false;
     private float nextTimeToFire = 0f;
 
     // Start is called before the first frame update
@@ -29,18 +30,19 @@ public class GunScript : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
+            
             nextTimeToFire = Time.time + fireRate;
             Shoot();
-
-            if(isScoped == true)
+           
+            if (isScoped == true)
             {
                 isScoped = false;
                 weaponHolderAnimator.SetBool("Scoped", false);
-                OnUnscoped();
+                StartCoroutine(OnUnscoped());
             }
         }
 
-        if(Input.GetButtonDown("Fire2") && Time.time >= nextTimeToFire)
+        if (Input.GetButtonDown("Fire2") && Time.time >= nextTimeToFire && scopING == false)
         {
             isScoped = !isScoped;
             weaponHolderAnimator.SetBool("Scoped", isScoped);
@@ -51,22 +53,28 @@ public class GunScript : MonoBehaviour
             }
             else
             {
-                OnUnscoped();
+                StartCoroutine(OnUnscoped());
             }
         }
     }
 
-    void OnUnscoped()
+    IEnumerator OnUnscoped()
     {
         scopeOverlay.SetActive(false);
         weaponCamera.SetActive(true);
-
         mainCamera.fieldOfView = normalFOV;
+
+        scopING = true;
+        yield return new WaitForSeconds(.15f);
+        scopING = false;
+
     }
 
     IEnumerator OnScoped()
     {
+        scopING = true;
         yield return new WaitForSeconds(.15f);
+        scopING = false;
         scopeOverlay.SetActive(true);
         weaponCamera.SetActive(false);
 

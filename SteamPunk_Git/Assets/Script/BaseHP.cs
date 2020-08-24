@@ -21,15 +21,20 @@ public class BaseHP : MonoBehaviour
     Color yellowColor = new Color(0.824f, 0.82f, 0f, 1f);
     Color redColor = new Color(0.663f, 0f, 0f, 1f);
 
-    // Start is called before the first frame update
     void Start()
     {
+        Init();
+    }
+
+    void Init()
+    {
         index = SceneManager.GetActiveScene().buildIndex;
-        if(index == 2)
+        Debug.Log(index);
+        if(index == 3)
         {
             victory = condition.endwave;
         }
-        else if(index == 3)
+        else if(index == 4)
         {
             victory = condition2.endwave;
         }
@@ -59,11 +64,11 @@ public class BaseHP : MonoBehaviour
             HpImage.color = redColor;
         }
 
-        if (index == 2)
+        if (index == 3)
         {
             victory = condition.endwave;
         }
-        else if (index == 3)
+        else if (index == 4)
         {
             victory = condition2.endwave;
         }
@@ -99,7 +104,8 @@ public class BaseHP : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             victorypanel.SetActive(false);
             Time.timeScale = 1f;
-            SceneManager.LoadScene(x+1);
+            LoadingScript.SceneNeedToLoad = 4;
+            SceneManager.LoadScene("LoadingScreen");
         }
 
     }
