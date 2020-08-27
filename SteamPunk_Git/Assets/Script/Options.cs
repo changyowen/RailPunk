@@ -39,6 +39,7 @@ public class Options : MonoBehaviour
     }
     IEnumerator Pause()
     {
+        SoundManager.playPauseSound();
         yield return new WaitForSeconds(.25f);
         Cursor.lockState = CursorLockMode.None;
         Debug.Log("Paused");
@@ -49,6 +50,7 @@ public class Options : MonoBehaviour
 
     public void Unpause()
     {
+        SoundManager.playPauseSound();
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
         GamePaused = false;

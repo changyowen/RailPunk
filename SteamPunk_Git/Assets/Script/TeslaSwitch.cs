@@ -24,9 +24,12 @@ public class TeslaSwitch : MonoBehaviour
     public GameObject mainTowerIcon, switchIcon;
 
     public AudioSource switchSound;
-    AudioClip SwitchSoundOn, SwitchSoundOff;
+    public AudioSource ShootingPointAudioSource;
+    AudioClip SwitchSoundOn, SwitchSoundOff, ElectricSphereSound;
 
     public GameObject SwitchIntruction;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,7 @@ public class TeslaSwitch : MonoBehaviour
 
         SwitchSoundOn = Resources.Load<AudioClip>("SwitchSoundOn");
         SwitchSoundOff = Resources.Load<AudioClip>("SwitchSoundOff");
+        ElectricSphereSound = Resources.Load<AudioClip>("ElectricSphere");
 
         MainSphere.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
         switchSphere.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
@@ -96,6 +100,7 @@ public class TeslaSwitch : MonoBehaviour
     {
         switchSound.clip = SwitchSoundOn;
         switchSound.Play();
+        ShootingPointAudioSource.PlayOneShot(ElectricSphereSound);
         yield return new WaitForSeconds(.9f);
         switchOn = true;
         ElectricSphere.SetActive(true);

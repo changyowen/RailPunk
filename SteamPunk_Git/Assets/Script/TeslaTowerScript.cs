@@ -6,6 +6,7 @@ using DigitalRuby.LightningBolt;
 public class TeslaTowerScript : MonoBehaviour
 {
     private Transform target;
+    private bool EnableElectricSphere = false;
 
     [Header("Attribute")]
     public float range = 200f;
@@ -16,14 +17,18 @@ public class TeslaTowerScript : MonoBehaviour
     Transform firePoint;
     public GameObject SwitchPosition;
     TeslaSwitch teslaSwitch;
+    public AudioClip ElectricZap;
 
     [Header("Unity Setup Field")]
     public string enemyTag = "Enemy";
+
+    AudioSource audioSrc;
 
     // Start is called before the first frame update
     void Start()
     {
         teslaSwitch = SwitchPosition.GetComponent<TeslaSwitch>();
+        audioSrc = GetComponent<AudioSource>();
 
         firePoint = transform;
 
@@ -80,6 +85,7 @@ public class TeslaTowerScript : MonoBehaviour
     {
         lightningEnd.transform.position = target.transform.position;
         lightningBolt.GetComponent<LightningBoltScript>().Trigger();
+        audioSrc.PlayOneShot(ElectricZap);
 
         EnemyHealth enemyhealth = target.GetComponent<EnemyHealth>();
         if (enemyhealth != null)
