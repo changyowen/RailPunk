@@ -358,8 +358,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564047944}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.0076683955, y: -0.99167264, z: 0.070924096, w: -0.10722159}
+  m_LocalPosition: {x: -21.226473, y: 33.98729, z: 108.24483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9894,6 +9894,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 403323099502241745, guid: d4669f8c682484548ab2861e09d3d6e3,
+        type: 3}
+      propertyPath: TrailModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5430367116278274347, guid: d4669f8c682484548ab2861e09d3d6e3,
         type: 3}
       propertyPath: m_Name
