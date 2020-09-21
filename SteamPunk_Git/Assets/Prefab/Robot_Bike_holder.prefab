@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8635064288771913046}
   - component: {fileID: 7600564657759921827}
   - component: {fileID: -5231581287925865718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Robot_Bike_holder
   m_TagString: Enemy
   m_Icon: {fileID: 0}

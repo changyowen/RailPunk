@@ -1669,9 +1669,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6457988877431103161}
   - component: {fileID: 9011995675272076809}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HitBox_weakness
-  m_TagString: Untagged
+  m_TagString: Weakness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1698,7 +1698,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176775651725987062}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 230.92407
   m_Height: 2831.0522
@@ -31013,50 +31013,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &2708704258893799805
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6701149295395552795}
-  - component: {fileID: 1485785266820932695}
-  m_Layer: 0
-  m_Name: HitBox_NotWeakness
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6701149295395552795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2708704258893799805}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7567143354154853064}
-  m_RootOrder: 1375
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1485785266820932695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2708704258893799805}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1935.3284, y: 163.20251, z: 246.03943}
-  m_Center: {x: 0.017089844, y: 79.39484, z: -3.7515259}
 --- !u!1 &2711437408614024174
 GameObject:
   m_ObjectHideFlags: 0
@@ -82024,9 +81980,10 @@ GameObject:
   - component: {fileID: -4818832715910350142}
   - component: {fileID: -2904027273475638833}
   - component: {fileID: -4357557251089394835}
-  m_Layer: 0
+  - component: {fileID: 8408525453142761672}
+  m_Layer: 12
   m_Name: zeppelin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83417,7 +83374,6 @@ Transform:
   - {fileID: 6090684006140596661}
   - {fileID: 3528801755652659481}
   - {fileID: 6457988877431103161}
-  - {fileID: 6701149295395552795}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83467,6 +83423,19 @@ MonoBehaviour:
     type: 3}
   airship: {fileID: 1044952029898700033, guid: ae54167160d45cd4d83054c5dfef5007, type: 3}
   location: 0
+--- !u!65 &8408525453142761672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081968024020580466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1951.3397, y: 175.35461, z: 263.98438}
+  m_Center: {x: -6.117859, y: 77.96539, z: 0.0030517578}
 --- !u!1 &7086725403723243728
 GameObject:
   m_ObjectHideFlags: 0

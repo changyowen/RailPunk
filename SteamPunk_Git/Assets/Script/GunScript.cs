@@ -141,10 +141,12 @@ public class GunScript : MonoBehaviour
                     Debug.Log("hit");
                     target.takeDamage(sniperDamage);
                 }
-                else
-                {
-                    Debug.Log("miss");
-                }
+            }
+
+            if(hit.transform.gameObject.tag == "Weakness")
+            {
+                EnemyHealth weakness = hit.transform.parent.GetComponent<EnemyHealth>();
+                weakness.takeDamage(sniperDamage * 2);
             }
 
             if(selectedWeapon == 0)

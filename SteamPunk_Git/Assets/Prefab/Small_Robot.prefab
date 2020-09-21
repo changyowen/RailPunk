@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8959996277434332558}
   - component: {fileID: 4331812912905748472}
   - component: {fileID: 225218206239174505}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Small_Robot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
