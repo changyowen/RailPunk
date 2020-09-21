@@ -9,7 +9,7 @@ public class TeslaTowerScript : MonoBehaviour
     private bool EnableElectricSphere = false;
 
     [Header("Attribute")]
-    public float range = 200f;
+    public float range = 800f;
     public float attack = 5f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
