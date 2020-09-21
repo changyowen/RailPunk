@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
-using UnityEngine.Playables;
 
-public class PathFollower4 : MonoBehaviour
+public class PathFollower5 : MonoBehaviour
 {
-    public PathCreator pathCreator1, pathCreator2, pathCreator3;
+    public PathCreator pathCreator1, pathCreator2, pathCreator3, pathCreator4, pathCreator5, pathCreator6;
     public EndOfPathInstruction end;
     float speed = 10;
     int gear = 0;
@@ -14,7 +13,7 @@ public class PathFollower4 : MonoBehaviour
     float dstTravelled;
     int whichPath = 0;
     int direction = 1;
-    public PlayableDirector timeline;
+    //public PlayableDirector timeline;
 
     //public GameObject arrow1, arrow2;
 
@@ -32,8 +31,8 @@ public class PathFollower4 : MonoBehaviour
     {
         if (transform.position == pathCreator1.path.GetPoint(0))
         {
-            direction *= -1;
-            dstTravelled = 0.1f;
+            whichPath = 6;
+            dstTravelled = 36.5f;
         }
         else if (transform.position == pathCreator1.path.GetPoint(2))
         {
@@ -57,8 +56,38 @@ public class PathFollower4 : MonoBehaviour
         }
         else if (transform.position == pathCreator3.path.GetPoint(2))
         {
-            direction *= -1;
-            dstTravelled -= 0.1f;
+            whichPath = 4;
+            dstTravelled = 0.1f;
+        }
+        else if (transform.position == pathCreator4.path.GetPoint(0))
+        {
+            whichPath = 3;
+            dstTravelled = 36.5f;
+        }
+        else if (transform.position == pathCreator4.path.GetPoint(2))
+        {
+            whichPath = 5;
+            dstTravelled = 0.1f;
+        }
+        else if (transform.position == pathCreator5.path.GetPoint(0))
+        {
+            whichPath = 4;
+            dstTravelled = 36.5f;
+        }
+        else if (transform.position == pathCreator5.path.GetPoint(2))
+        {
+            whichPath = 6;
+            dstTravelled = 0.1f;
+        }
+        else if (transform.position == pathCreator6.path.GetPoint(0))
+        {
+            whichPath = 5;
+            dstTravelled = 36.5f;
+        }
+        else if (transform.position == pathCreator6.path.GetPoint(2))
+        {
+            whichPath = 1;
+            dstTravelled = 0.1f;
         }
 
         /**///important!
@@ -78,19 +107,31 @@ public class PathFollower4 : MonoBehaviour
         {
             transform.position = pathCreator3.path.GetPointAtDistance(dstTravelled, end);
         }
+        else if (whichPath == 4)
+        {
+            transform.position = pathCreator4.path.GetPointAtDistance(dstTravelled, end);
+        }
+        else if (whichPath == 5)
+        {
+            transform.position = pathCreator5.path.GetPointAtDistance(dstTravelled, end);
+        }
+        else if (whichPath == 6)
+        {
+            transform.position = pathCreator6.path.GetPointAtDistance(dstTravelled, end);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeline.state != PlayState.Paused)
-        {
-            speed = 0;
-        }
-        else
-        {
-            speed = 8;
-        }
+        //if (timeline.state != PlayState.Paused)
+        //{
+        //    speed = 0;
+        //}
+        //else
+        //{
+        //    speed = 8;
+        //}
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

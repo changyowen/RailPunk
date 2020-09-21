@@ -19,7 +19,7 @@ public class TeslaSwitch : MonoBehaviour
     Color DullYellow = new Color(.68f, .68f, 0f, 1f);
     Color GreenColor = new Color(0f, 1f, 0f, 1f);
     Color DullGreen = new Color(0f, .5f, 0f, 1f);
-    Color OrangeColor = new Color(1f, .733f, 0f, 1f);
+    Color OrangeColor = new Color(1f, .55f, 0f, 1f);
     Color DullOrange = new Color(.8f, .4f, 0f, 1f);
     Color PurpleColor = new Color(1f, 0f, 1f, 1f);
     Color DullPurple = new Color(.54f, 0f, .54f, 1f);
@@ -181,22 +181,22 @@ public class TeslaSwitch : MonoBehaviour
         }
         else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_E"))
         {
-            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 10f);
-            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 10f);
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 6f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 6f);
             for (int i = 1; i < 4; i++)
             {
-                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 10f);
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 6f);
             }
             mainTowerIcon.GetComponent<SpriteRenderer>().color = OrangeColor;
             switchIcon.GetComponent<SpriteRenderer>().color = OrangeColor;
         }
         else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_F"))
         {
-            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10f);
-            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10f);
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10);
             for (int i = 1; i < 4; i++)
             {
-                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10f);
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10);
             }
             mainTowerIcon.GetComponent<SpriteRenderer>().color = PurpleColor;
             switchIcon.GetComponent<SpriteRenderer>().color = PurpleColor;

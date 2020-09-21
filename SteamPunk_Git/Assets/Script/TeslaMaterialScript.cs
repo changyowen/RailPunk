@@ -8,7 +8,7 @@ public class TeslaMaterialScript : MonoBehaviour
     Color BlueColor = new Color(0f, 0.188f, 1f, 1f);
     Color YellowColor = new Color(1f, 1f, 0f, 1f);
     Color GreenColor = new Color(0f, 1f, 0f, 1f);
-    Color OrangeColor = new Color(1f, .733f, 0f, 1f);
+    Color OrangeColor = new Color(1f, .55f, 0f, 1f);
     Color PurpleColor = new Color(1f, 0f, 1f, 1f);
     Color DullRed = new Color(.5f, 0f, 0f, 1f);
     Color DullBlue = new Color(0f, .5f, 1f, 1f);
