@@ -43,7 +43,7 @@ public class GunScript : MonoBehaviour
         //Switch Weapon Use
         int previousSelectedWeapon = selectedWeapon;
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f && isScoped == false)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && isScoped == false && Time.timeScale != 0f)
         {
             if (selectedWeapon >= weaponSwitching_Obj.transform.childCount - 1)
             {
@@ -54,7 +54,7 @@ public class GunScript : MonoBehaviour
                 selectedWeapon++;
             }
         }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0f && isScoped == false)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f && isScoped == false && Time.timeScale != 0f)
         {
             if (selectedWeapon <= 0)
             {
@@ -72,7 +72,7 @@ public class GunScript : MonoBehaviour
         }
 
         //Shooting Use
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && Time.timeScale != 0f)
         {
 
             nextTimeToFire = Time.time + fireRate;
@@ -86,7 +86,7 @@ public class GunScript : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Fire2") && Time.time >= nextTimeToFire && scopING == false && selectedWeapon != 0)
+        if (Input.GetButtonDown("Fire2") && Time.time >= nextTimeToFire && scopING == false && selectedWeapon != 0 && Time.timeScale != 0f)
         {
             isScoped = !isScoped;
             weaponHolderAnimator.SetBool("Scoped", isScoped);
