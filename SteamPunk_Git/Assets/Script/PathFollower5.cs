@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using PathCreation;
 
 public class PathFollower5 : MonoBehaviour
@@ -13,7 +14,7 @@ public class PathFollower5 : MonoBehaviour
     float dstTravelled;
     int whichPath = 0;
     int direction = 1;
-    //public PlayableDirector timeline;
+    public PlayableDirector timeline;
 
     //public GameObject arrow1, arrow2;
 
@@ -124,14 +125,14 @@ public class PathFollower5 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (timeline.state != PlayState.Paused)
-        //{
-        //    speed = 0;
-        //}
-        //else
-        //{
-        //    speed = 8;
-        //}
+        if (timeline.state != PlayState.Paused)
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = 8;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
