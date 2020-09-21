@@ -6,6 +6,8 @@ public class EnemyHealth : MonoBehaviour
 {
     float small_robot_hp = 5;
     float robot_bike_hp = 10;
+    float airship_hp = 10;
+    float zeppelin_boss_hp = 250;
     public float EnemyHp;
 
     // Start is called before the first frame update
@@ -18,6 +20,14 @@ public class EnemyHealth : MonoBehaviour
         else if (this.name.Contains("Robot_Bike"))
         {
             EnemyHp = robot_bike_hp;
+        }
+        if (this.name.Contains("Airship"))
+        {
+            EnemyHp = airship_hp;
+        }
+        if (this.name.Contains("Zeppelin"))
+        {
+            EnemyHp = zeppelin_boss_hp;
         }
 
     }
