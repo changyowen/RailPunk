@@ -2091,8 +2091,6 @@ PlayableDirector:
     value: {fileID: 1544126887}
   - key: {fileID: 2065045192218592144, guid: 31eb19efc6c3765498b1f939a046e6b2, type: 2}
     value: {fileID: 799875631}
-  - key: {fileID: -1876836348006356225, guid: 31eb19efc6c3765498b1f939a046e6b2, type: 2}
-    value: {fileID: 2011814178}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &957618801
@@ -2245,6 +2243,11 @@ PrefabInstance:
     - target: {fileID: 9159174662886948221, guid: 48232ff97038d8744a8c1caeaa339999,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159174663432666230, guid: 48232ff97038d8744a8c1caeaa339999,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
