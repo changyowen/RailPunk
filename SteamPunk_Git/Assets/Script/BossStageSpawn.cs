@@ -25,20 +25,52 @@ public class BossStageSpawn : MonoBehaviour
 
     IEnumerator SpawnRobot()
     {
-        for (int i = 1; i < 8; i++)
+        for (int i = 1; i < 5; i++)
         {
-            Instantiate(small_robot, new Vector3(14f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
-            yield return new WaitForSeconds(5f);
+
+            Instantiate(small_robot, new Vector3(1070f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(1010f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            yield return new WaitForSeconds(6f);
         }
 
-        for (int i = 1; i < 8; i++)
+        yield return new WaitForSeconds(15f);
+        for (int i = 1; i < 5; i++)
         {
-            Instantiate(small_robot, new Vector3(4f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
-            Instantiate(small_robot, new Vector3(24f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
-            yield return new WaitForSeconds(7f);
+            Instantiate(small_robot, new Vector3(1070f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(1040f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(1010f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            yield return new WaitForSeconds(6f);
         }
-
+        yield return new WaitForSeconds(15f);
+        for (int i = 1; i < 5; i++)
+        {
+            Instantiate(robot_bike, new Vector3(1100f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(1070f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(1010f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(robot_bike, new Vector3(1100f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            yield return new WaitForSeconds(8f);
+        }
+        yield return new WaitForSeconds(25f);
+        for (int i = 1; i < 5; i++)
+        {
+            Instantiate(robot_bike, new Vector3(1100f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(1070f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(airship, new Vector3(1040f, 300f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(1010f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(robot_bike, new Vector3(1100f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            yield return new WaitForSeconds(8f);
+        }
+        yield return new WaitForSeconds(30f);
+        for (int i = 1; i < 5; i++)
+        {
+            Instantiate(robot_bike, new Vector3(1070f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(airship, new Vector3(1040f, 300f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(robot_bike, new Vector3(1010f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
+            yield return new WaitForSeconds(8f);
+        }
+        Instantiate(zeppelin, new Vector3(1040f, 400f, 4300f), Quaternion.Euler(0f, 180f, 0f)); ;
         SpawnEnd = true;
+
     }
 
     void CheckEnemy()
