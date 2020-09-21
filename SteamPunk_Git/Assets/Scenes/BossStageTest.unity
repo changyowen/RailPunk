@@ -2743,7 +2743,7 @@ MonoBehaviour:
   hptext: {fileID: 0}
   condition: {fileID: 0}
   condition2: {fileID: 0}
-  condition3: {fileID: 0}
+  condition3: {fileID: 650753272}
   victory: 0
   victorypanel: {fileID: 509633057}
   win: {fileID: 1184329438}
