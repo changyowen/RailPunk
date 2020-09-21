@@ -50,7 +50,6 @@ public class BossStageSpawn : MonoBehaviour
             Instantiate(robot_bike, new Vector3(1100f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
             yield return new WaitForSeconds(8f);
         }
-        SpawnEnd = true;
         yield return new WaitForSeconds(25f);
         for (int i = 1; i < 5; i++)
         {
@@ -69,7 +68,7 @@ public class BossStageSpawn : MonoBehaviour
             Instantiate(robot_bike, new Vector3(1010f, 110f, 4300f), Quaternion.Euler(0f, 180f, 0f));
             yield return new WaitForSeconds(8f);
         }
-        Instantiate(zeppelin, new Vector3(1040f, 350f, 4300f), Quaternion.Euler(0f, 180f, 0f)); ;
+        Instantiate(zeppelin, new Vector3(1040f, 400f, 4300f), Quaternion.Euler(0f, 180f, 0f)); ;
         SpawnEnd = true;
 
     }

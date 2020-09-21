@@ -11,6 +11,7 @@ public class BaseHP : MonoBehaviour
     public Text hptext;
     public GameManagerScript condition;
     public Stage2Spawning condition2;
+    public BossStageSpawn condition3;
     public bool victory;
     public GameObject victorypanel, win, lose, Hpbar;
     public Image HpImage;
@@ -37,6 +38,10 @@ public class BaseHP : MonoBehaviour
         else if(index == 4)
         {
             victory = condition2.endwave;
+        }
+        else if(index == 5)
+        {
+            victory = condition3.endwave;
         }
         victorypanel.SetActive(false);
         win.SetActive(false);
