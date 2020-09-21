@@ -15,6 +15,14 @@ public class TeslaSwitch : MonoBehaviour
     Color DullRed = new Color(.4f, 0f, 0f, 1f);
     Color BrightBlue = new Color(0f, 1f, 1f, 1f);
     Color DullBlue = new Color(0f, .5f, 1f, 1f);
+    Color YellowColor = new Color(1f, 1f, 0f, 1f);
+    Color DullYellow = new Color(.68f, .68f, 0f, 1f);
+    Color GreenColor = new Color(0f, 1f, 0f, 1f);
+    Color DullGreen = new Color(0f, .5f, 0f, 1f);
+    Color OrangeColor = new Color(1f, .733f, 0f, 1f);
+    Color DullOrange = new Color(.8f, .4f, 0f, 1f);
+    Color PurpleColor = new Color(1f, 0f, 1f, 1f);
+    Color DullPurple = new Color(.54f, 0f, .54f, 1f);
 
     public GameObject TeslaTowerMainBody;
     public GameObject MainSphere, switchSphere;
@@ -108,28 +116,7 @@ public class TeslaSwitch : MonoBehaviour
         mainLight.intensity = 7;
         switchLight.intensity = 5;
 
-        if (TeslaTowerMainBody.name.Contains("Tesla_Tower_A"))
-        {
-            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * 10f);
-            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * 10f);
-            for(int i = 1; i < 4; i++)
-            {
-                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * 10f);
-            }
-            mainTowerIcon.GetComponent<SpriteRenderer>().color = RedColor;
-            switchIcon.GetComponent<SpriteRenderer>().color = RedColor;
-        }
-        else if(TeslaTowerMainBody.name.Contains("Tesla_Tower_B"))
-        {
-            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 10f);
-            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 10f);
-            for (int i = 1; i < 4; i++)
-            {
-                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 10f);
-            }
-            mainTowerIcon.GetComponent<SpriteRenderer>().color = BrightBlue;
-            switchIcon.GetComponent<SpriteRenderer>().color = BrightBlue;
-        }
+        ChangeMaterialColourToBright();
     }
 
     void TurnSwitchOff()
@@ -143,6 +130,81 @@ public class TeslaSwitch : MonoBehaviour
         mainLight.intensity = 0;
         switchLight.intensity = 0;
 
+        ChangeMaterialColourToDull();
+    }
+
+    void ChangeMaterialColourToBright()
+    {
+        if (TeslaTowerMainBody.name.Contains("Tesla_Tower_A"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * 10f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * 10f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * 10f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = RedColor;
+            switchIcon.GetComponent<SpriteRenderer>().color = RedColor;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_B"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 10f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 10f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", BlueColor * 10f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = BrightBlue;
+            switchIcon.GetComponent<SpriteRenderer>().color = BrightBlue;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_C"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", YellowColor * 10f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", YellowColor * 10f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", YellowColor * 10f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = YellowColor;
+            switchIcon.GetComponent<SpriteRenderer>().color = YellowColor;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_D"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", GreenColor * 10f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", GreenColor * 10f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", GreenColor * 10f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = GreenColor;
+            switchIcon.GetComponent<SpriteRenderer>().color = GreenColor;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_E"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 10f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 10f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 10f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = OrangeColor;
+            switchIcon.GetComponent<SpriteRenderer>().color = OrangeColor;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_F"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 10f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = PurpleColor;
+            switchIcon.GetComponent<SpriteRenderer>().color = PurpleColor;
+        }
+    }
+
+    void ChangeMaterialColourToDull()
+    {
         if (TeslaTowerMainBody.name.Contains("Tesla_Tower_A"))
         {
             MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", RedColor * .5f);
@@ -164,6 +226,50 @@ public class TeslaSwitch : MonoBehaviour
             }
             mainTowerIcon.GetComponent<SpriteRenderer>().color = DullBlue;
             switchIcon.GetComponent<SpriteRenderer>().color = DullBlue;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_C"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", YellowColor * 3f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", YellowColor * 3f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", YellowColor * 3f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullYellow;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullYellow;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_D"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", GreenColor * 3f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", GreenColor * 3f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", GreenColor * 3f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullGreen;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullGreen;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_E"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 3f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 3f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", OrangeColor * 3f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullOrange;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullOrange;
+        }
+        else if (TeslaTowerMainBody.name.Contains("Tesla_Tower_F"))
+        {
+            MainSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 3f);
+            switchSphere.GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 3f);
+            for (int i = 1; i < 4; i++)
+            {
+                SmallSphere[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", PurpleColor * 3f);
+            }
+            mainTowerIcon.GetComponent<SpriteRenderer>().color = DullPurple;
+            switchIcon.GetComponent<SpriteRenderer>().color = DullPurple;
         }
     }
 }
