@@ -1,5 +1,63 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!136 &1237745318040147298
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383245246048377821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 47.9
+  m_Height: 263
+  m_Direction: 0
+  m_Center: {x: -11.947147, y: 151.2078, z: 0}
+--- !u!1 &8750716168804796554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5433882189749262948}
+  - component: {fileID: 5158340733820412239}
+  m_Layer: 0
+  m_Name: HitBox_nonWeakness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5433882189749262948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750716168804796554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 12.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 417632969874681787}
+  m_RootOrder: 140
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5158340733820412239
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750716168804796554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 195.42078, y: 33.049255, z: 36.862915}
+  m_Center: {x: 40.588684, y: 4.813034, z: 0.2189331}
 --- !u!1001 &162414928398010448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,7 +478,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e5c611be97e1713408b212b200127c70,
         type: 3}
       propertyPath: m_Name
-      value: airship
+      value: AirShip
       objectReference: {fileID: 0}
     - target: {fileID: 1015892336580623384, guid: e5c611be97e1713408b212b200127c70,
         type: 3}
@@ -769,3 +827,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d461c92f749e23b4a9af3a68603ae373, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5c611be97e1713408b212b200127c70, type: 3}
+--- !u!4 &417632969874681787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5c611be97e1713408b212b200127c70,
+    type: 3}
+  m_PrefabInstance: {fileID: 162414928398010448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4383245246048377821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4509626977228968845, guid: e5c611be97e1713408b212b200127c70,
+    type: 3}
+  m_PrefabInstance: {fileID: 162414928398010448}
+  m_PrefabAsset: {fileID: 0}
