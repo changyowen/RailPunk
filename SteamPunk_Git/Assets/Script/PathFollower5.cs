@@ -25,7 +25,7 @@ public class PathFollower5 : MonoBehaviour
         direction = 1;
         dstTravelled = 10f;
 
-        speed = 8;
+        speed = 16;
     }
 
     void FixedUpdate()
@@ -131,7 +131,7 @@ public class PathFollower5 : MonoBehaviour
         }
         else
         {
-            speed = 8;
+            speed = 16;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
