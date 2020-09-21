@@ -146,7 +146,6 @@ public class GunScript : MonoBehaviour
                     Debug.Log("miss");
                 }
             }
-            Debug.Log(hit.transform.gameObject.name);
 
             if(selectedWeapon == 0)
             {
