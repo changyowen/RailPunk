@@ -1248,11 +1248,11 @@ MonoBehaviour:
   condition2: {fileID: 0}
   condition3: {fileID: 0}
   victory: 0
-  victorypanel: {fileID: 0}
-  win: {fileID: 0}
-  lose: {fileID: 0}
-  Hpbar: {fileID: 0}
-  HpImage: {fileID: 0}
+  victorypanel: {fileID: 509633057}
+  win: {fileID: 1184329438}
+  lose: {fileID: 323525296}
+  Hpbar: {fileID: 829132382}
+  HpImage: {fileID: 829132381}
   basecollider: {fileID: 396857962}
   index: 0
 --- !u!54 &396857961
@@ -2217,6 +2217,24 @@ PrefabInstance:
 --- !u!224 &829132380 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7399641984162065189, guid: 57deeced74d8dfc44aa4f935ab76881c,
+    type: 3}
+  m_PrefabInstance: {fileID: 829132379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &829132381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7399641983870498338, guid: 57deeced74d8dfc44aa4f935ab76881c,
+    type: 3}
+  m_PrefabInstance: {fileID: 829132379}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &829132382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7399641984216910856, guid: 57deeced74d8dfc44aa4f935ab76881c,
     type: 3}
   m_PrefabInstance: {fileID: 829132379}
   m_PrefabAsset: {fileID: 0}
