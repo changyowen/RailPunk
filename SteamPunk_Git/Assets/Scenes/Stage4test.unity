@@ -3300,7 +3300,7 @@ GameObject:
   - component: {fileID: 2056417711}
   - component: {fileID: 2056417710}
   - component: {fileID: 2056417709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3464,6 +3464,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2647772461222102347, guid: 30b4afe5130687e45bb667c5fa6787a6,
+        type: 3}
+      propertyPath: scopeOverlay
+      value: 
+      objectReference: {fileID: 887882813}
+    - target: {fileID: 2647772461222102347, guid: 30b4afe5130687e45bb667c5fa6787a6,
+        type: 3}
+      propertyPath: IgnoreMe.m_Bits
+      value: 3639
+      objectReference: {fileID: 0}
     - target: {fileID: 6370350100147246926, guid: 30b4afe5130687e45bb667c5fa6787a6,
         type: 3}
       propertyPath: pathCreator1
@@ -3483,6 +3493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: end
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521498792355370258, guid: 30b4afe5130687e45bb667c5fa6787a6,
+        type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7521498793985856753, guid: 30b4afe5130687e45bb667c5fa6787a6,
         type: 3}

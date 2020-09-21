@@ -187,7 +187,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6691f4df1834094ca4e5512e86d77e9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
@@ -315,7 +315,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6691f4df1834094ca4e5512e86d77e9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -503,8 +503,13 @@ MonoBehaviour:
   mainCamera: {fileID: 7521498793156843350}
   weaponCamera: {fileID: 2647772460784176966}
   weaponSwitching_Obj: {fileID: 5163416389744789289}
-  impactEffect: {fileID: 7465570330849040188, guid: 6864f676633e7894b8533936eab0c522,
+  SniperimpactEffect: {fileID: 7465570330849040188, guid: e7ac409d496b76e48854da329f213271,
     type: 3}
+  AK47impactEffect: {fileID: 7465570330849040188, guid: 6864f676633e7894b8533936eab0c522,
+    type: 3}
+  IgnoreMe:
+    serializedVersion: 2
+    m_Bits: 3639
   sniperDamage: 10
   fireRate: 2
   scopedFOV: 15
@@ -716,7 +721,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 311
+    m_Bits: 2359
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7302750309322784266}
   - component: {fileID: 7304101199137462732}
   - component: {fileID: 8158210017286689427}
-  m_Layer: 0
-  m_Name: DustExplosion_Edited
+  m_Layer: 2
+  m_Name: SniperDustExplosion_Edited
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7465570330849040188}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 6.25, y: 0, z: -53.75}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalScale: {x: 16, y: 16, z: 16}
   m_Children:
   - {fileID: 7460349825717255850}
   - {fileID: 7464475764894313164}
@@ -4849,7 +4849,7 @@ GameObject:
   - component: {fileID: 7464475764894313164}
   - component: {fileID: 7303406594046641062}
   - component: {fileID: 7304435358327085594}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SmallExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9688,7 +9688,7 @@ GameObject:
   - component: {fileID: 7460349825717255850}
   - component: {fileID: 7303034635536717938}
   - component: {fileID: 7304493174648129626}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14419,7 +14419,7 @@ GameObject:
   - component: {fileID: 7464314529028071566}
   - component: {fileID: 7303352822663421006}
   - component: {fileID: 7303718551250425668}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Shockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19231,7 +19231,7 @@ GameObject:
   - component: {fileID: 7460693945879879610}
   - component: {fileID: 7303156324572551682}
   - component: {fileID: 7304234465941800982}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SandParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

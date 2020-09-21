@@ -12,7 +12,9 @@ public class GunScript : MonoBehaviour
     public Camera mainCamera;
     public GameObject weaponCamera;
     public GameObject weaponSwitching_Obj;
-    public GameObject impactEffect;
+    public GameObject SniperimpactEffect;
+    public GameObject AK47impactEffect;
+    public LayerMask IgnoreMe;
 
     [Header("Weapon Data")]
     public int sniperDamage = 10;
@@ -129,7 +131,7 @@ public class GunScript : MonoBehaviour
         GunAudioSource.Play();
         muzzleFlash.Play();
         RaycastHit hit;
-        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit))
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 1000f, ~IgnoreMe))
         {
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target != null)
@@ -144,8 +146,16 @@ public class GunScript : MonoBehaviour
                     Debug.Log("miss");
                 }
             }
+            Debug.Log(hit.transform.gameObject.name);
 
-            Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            if(selectedWeapon == 0)
+            {
+                Instantiate(AK47impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            }
+            else if(selectedWeapon == 1)
+            {
+                Instantiate(SniperimpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            }
         }
     }
 
