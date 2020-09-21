@@ -29,14 +29,14 @@ public class GameManagerScript : MonoBehaviour
     {
         for(int i = 1; i < 8; i++)
         {
-            Instantiate(small_robot, new Vector3(14f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(530f, 57f, 1350f), Quaternion.Euler(0f, 180f, 0f));
             yield return new WaitForSeconds(5f);
         }
 
         for (int i = 1; i < 8; i++)
         {
-            Instantiate(small_robot, new Vector3(4f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
-            Instantiate(small_robot, new Vector3(24f, 53f, 475f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(520f, 57f, 1350f), Quaternion.Euler(0f, 180f, 0f));
+            Instantiate(small_robot, new Vector3(540f, 57f, 1350f), Quaternion.Euler(0f, 180f, 0f));
             yield return new WaitForSeconds(7f);
         }
        
