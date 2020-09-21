@@ -1243,16 +1243,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdaf430a98ad60a4e805716755e49ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hptext: {fileID: 0}
-  condition: {fileID: 0}
+  hptext: {fileID: 1757311275}
+  condition: {fileID: 650753272}
   condition2: {fileID: 0}
   condition3: {fileID: 0}
   victory: 0
-  victorypanel: {fileID: 0}
-  win: {fileID: 0}
-  lose: {fileID: 0}
-  Hpbar: {fileID: 0}
-  HpImage: {fileID: 0}
+  victorypanel: {fileID: 509633057}
+  win: {fileID: 1184329438}
+  lose: {fileID: 323525296}
+  Hpbar: {fileID: 2111642150}
+  HpImage: {fileID: 374724066}
   basecollider: {fileID: 396857962}
   index: 0
 --- !u!54 &396857961
@@ -1292,8 +1292,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396857959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.857361, y: 92.2287, z: -461.66095}
-  m_LocalScale: {x: 0.7867647, y: 0.7867647, z: 0.7867647}
+  m_LocalPosition: {x: 534.17, y: 97.654, z: -461.66095}
+  m_LocalScale: {x: 1.8884981, y: 1.1315249, z: 0.7867647}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -1887,6 +1887,7 @@ GameObject:
   - component: {fileID: 650753271}
   - component: {fileID: 650753270}
   - component: {fileID: 650753269}
+  - component: {fileID: 650753272}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1942,6 +1943,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &650753272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650753268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d52eb045dae4fb468400578bcf7e042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small_robot: {fileID: 1957259210327591796, guid: 51f8759904d33dc43b07a3035717ccc0,
+    type: 3}
+  endwave: 0
+  SpawnEnd: 0
 --- !u!1 &692222720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4858,6 +4875,12 @@ Transform:
   m_Father: {fileID: 1870314618}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 47.927002, y: -177.882, z: -4.255}
+--- !u!1 &2111642150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7399641984162065186, guid: 57deeced74d8dfc44aa4f935ab76881c,
+    type: 3}
+  m_PrefabInstance: {fileID: 829132379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7630434077678296918
 PrefabInstance:
   m_ObjectHideFlags: 0
