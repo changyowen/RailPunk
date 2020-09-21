@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Robot_movement : MonoBehaviour
+public class AirshipMovement : MonoBehaviour
 {
-    public Transform partToRotate;
     public bool moving = true;
-    private float minionSpeed = 25f;
-    private float rotation = 0;
+    private float minionSpeed = 20f;
     Rigidbody rb;
 
     public GameObject Icon;
@@ -21,12 +19,11 @@ public class Robot_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(moving == true)
+        if (moving == true)
         {
-            rotation += 2f;
-            partToRotate.transform.localRotation = Quaternion.Euler(rotation, 0, 0);
             rb = GetComponent<Rigidbody>();
             rb.velocity = new Vector3(0, 0, -minionSpeed);
+
         }
     }
 
