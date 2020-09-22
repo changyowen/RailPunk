@@ -77,7 +77,7 @@ public class BaseHP : MonoBehaviour
         {
             victory = condition2.endwave;
         }
-        if (basehitpoint == 0)
+        if (basehitpoint <= 0)
         {
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
