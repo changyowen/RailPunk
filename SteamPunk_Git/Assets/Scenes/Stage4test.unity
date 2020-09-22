@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hptext: {fileID: 0}
-  condition: {fileID: 0}
+  condition: {fileID: 650753272}
   condition2: {fileID: 0}
   condition3: {fileID: 0}
   victory: 0
@@ -1887,6 +1887,7 @@ GameObject:
   - component: {fileID: 650753271}
   - component: {fileID: 650753270}
   - component: {fileID: 650753269}
+  - component: {fileID: 650753272}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1942,6 +1943,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &650753272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650753268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d52eb045dae4fb468400578bcf7e042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small_robot: {fileID: 1957259210327591796, guid: 51f8759904d33dc43b07a3035717ccc0,
+    type: 3}
+  endwave: 0
+  SpawnEnd: 0
 --- !u!1 &692222720
 GameObject:
   m_ObjectHideFlags: 0

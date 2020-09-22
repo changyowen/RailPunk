@@ -2136,6 +2136,7 @@ GameObject:
   - component: {fileID: 1015775164}
   - component: {fileID: 1015775163}
   - component: {fileID: 1015775162}
+  - component: {fileID: 1015775165}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2191,6 +2192,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1015775165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015775161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b45f42cf7ced71499218f9b67780cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small_robot: {fileID: 1957259210327591796, guid: 51f8759904d33dc43b07a3035717ccc0,
+    type: 3}
+  robot_bike: {fileID: 1223521577567280789, guid: c104b67b9d3f2d3489c12f895707a2f6,
+    type: 3}
+  endwave: 0
+  SpawnEnd: 0
 --- !u!1001 &1042347771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4563,7 +4582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hptext: {fileID: 0}
   condition: {fileID: 0}
-  condition2: {fileID: 0}
+  condition2: {fileID: 1015775165}
   condition3: {fileID: 0}
   victory: 0
   victorypanel: {fileID: 2052017734}
