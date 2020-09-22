@@ -21,11 +21,11 @@ public class EnemyHealth : MonoBehaviour
         {
             EnemyHp = robot_bike_hp;
         }
-        if (this.name.Contains("Airship"))
+        if (this.name.Contains("AirShip"))
         {
             EnemyHp = airship_hp;
         }
-        if (this.name.Contains("Zeppelin"))
+        if (this.name.Contains("zeppelin"))
         {
             EnemyHp = zeppelin_boss_hp;
         }

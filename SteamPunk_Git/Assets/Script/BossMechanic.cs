@@ -38,7 +38,7 @@ public class BossMechanic : MonoBehaviour
                 Instantiate(robot_bike, new Vector3(980f, 125f, location), Quaternion.Euler(0f, 180f, 0f));
                 if(shipSpawn == true)
                 {
-                    Instantiate(airship, new Vector3(1040f, 300f, location), Quaternion.Euler(0f, 180f, 0f));
+                    Instantiate(airship, new Vector3(1040f, 300f, location), Quaternion.Euler(0f, -90f, 0f));
                 }
             }
             yield return new WaitForSeconds(5f);

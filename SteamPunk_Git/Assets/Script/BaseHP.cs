@@ -110,7 +110,7 @@ public class BaseHP : MonoBehaviour
             victorypanel.SetActive(false);
             Time.timeScale = 1f;
 
-            if(x < 5)
+            if(x == 5)
             {
                 LoadingScript.SceneNeedToLoad = 0;
             }
