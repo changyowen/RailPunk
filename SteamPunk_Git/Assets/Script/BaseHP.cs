@@ -109,7 +109,7 @@ public class BaseHP : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             victorypanel.SetActive(false);
             Time.timeScale = 1f;
-            LoadingScript.SceneNeedToLoad = 4;
+            LoadingScript.SceneNeedToLoad = x+1;
             SceneManager.LoadScene("LoadingScreen");
         }
 

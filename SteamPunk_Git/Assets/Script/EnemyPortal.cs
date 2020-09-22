@@ -30,7 +30,7 @@ public class EnemyPortal : MonoBehaviour
 
         yield return new WaitForSeconds(3);
         Vector3 currentposition = col.gameObject.transform.position;
-        col.gameObject.transform.position = new Vector3(currentposition.x, currentposition.y, -115f);
+        col.gameObject.transform.position = new Vector3(currentposition.x, currentposition.y, 400f);
         col.gameObject.SetActive(true);
 
     }
