@@ -927,7 +927,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2018775611}
         m_MethodName: NextStage
         m_Mode: 1
         m_Arguments:
@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2018775611}
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -2828,7 +2828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2018775611}
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -4711,7 +4711,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: e02683d7eb869cc469a2c37c2c6f7ccc, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
     m_Alignment: 4
