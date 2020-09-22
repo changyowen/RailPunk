@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RobotBikeMove : MonoBehaviour
 {
@@ -13,14 +14,22 @@ public class RobotBikeMove : MonoBehaviour
     public GameObject Icon;
     Quaternion IconRotation;
 
+    private int checkScene = 0;
+
     void Awake()
     {
         IconRotation = Icon.transform.rotation;
+        checkScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(checkScene == 5)
+        {
+            minionSpeed = 80f;
+        }
+
         if (moving == true)
         {
             rotation += 4f;

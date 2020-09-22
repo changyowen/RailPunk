@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZeppelinMov : MonoBehaviour
 {
     public bool moving = true;
-    private float minionSpeed = 10f;
+    private float minionSpeed = 20f;
     Rigidbody rb;
 
     public GameObject Icon;

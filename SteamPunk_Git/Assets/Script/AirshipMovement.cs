@@ -5,7 +5,7 @@ using UnityEngine;
 public class AirshipMovement : MonoBehaviour
 {
     public bool moving = true;
-    private float minionSpeed = 20f;
+    private float minionSpeed = 50f;
     Rigidbody rb;
 
     public GameObject Icon;

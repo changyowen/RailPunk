@@ -33,7 +33,7 @@ public class PathFollower5 : MonoBehaviour
         if (transform.position == pathCreator1.path.GetPoint(0))
         {
             whichPath = 6;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator1.path.GetPoint(2))
         {
@@ -43,7 +43,7 @@ public class PathFollower5 : MonoBehaviour
         else if (transform.position == pathCreator2.path.GetPoint(0))
         {
             whichPath = 1;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator2.path.GetPoint(2))
         {
@@ -53,7 +53,7 @@ public class PathFollower5 : MonoBehaviour
         else if (transform.position == pathCreator3.path.GetPoint(0))
         {
             whichPath = 2;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator3.path.GetPoint(2))
         {
@@ -63,7 +63,7 @@ public class PathFollower5 : MonoBehaviour
         else if (transform.position == pathCreator4.path.GetPoint(0))
         {
             whichPath = 3;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator4.path.GetPoint(2))
         {
@@ -73,7 +73,7 @@ public class PathFollower5 : MonoBehaviour
         else if (transform.position == pathCreator5.path.GetPoint(0))
         {
             whichPath = 4;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator5.path.GetPoint(2))
         {
@@ -83,7 +83,7 @@ public class PathFollower5 : MonoBehaviour
         else if (transform.position == pathCreator6.path.GetPoint(0))
         {
             whichPath = 5;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator6.path.GetPoint(2))
         {

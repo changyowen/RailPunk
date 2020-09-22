@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Robot_movement : MonoBehaviour
 {
@@ -13,15 +14,23 @@ public class Robot_movement : MonoBehaviour
     public GameObject Icon;
     Quaternion IconRotation;
 
+    private int checkScene = 0;
+
     void Awake()
     {
         IconRotation = Icon.transform.rotation;
+        checkScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(moving == true)
+        if (checkScene == 5)
+        {
+            minionSpeed = 40f;
+        }
+
+        if (moving == true)
         {
             rotation += 2f;
             partToRotate.transform.localRotation = Quaternion.Euler(rotation, 0, 0);

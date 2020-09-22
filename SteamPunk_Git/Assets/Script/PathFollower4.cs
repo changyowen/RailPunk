@@ -43,7 +43,7 @@ public class PathFollower4 : MonoBehaviour
         else if (transform.position == pathCreator2.path.GetPoint(0))
         {
             whichPath = 1;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator2.path.GetPoint(2))
         {
@@ -53,7 +53,7 @@ public class PathFollower4 : MonoBehaviour
         else if (transform.position == pathCreator3.path.GetPoint(0))
         {
             whichPath = 2;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator3.path.GetPoint(2))
         {
