@@ -25,7 +25,7 @@ public class PathFollower3 : MonoBehaviour
         direction = 1;
         dstTravelled = 10f;
 
-        speed = 8;
+        speed = 12;
     }
 
     void FixedUpdate()
@@ -33,7 +33,7 @@ public class PathFollower3 : MonoBehaviour
         if (transform.position == pathCreator1.path.GetPoint(0))
         {
             whichPath = 4;
-            dstTravelled = 0.1f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator1.path.GetPoint(2))
         {
@@ -43,7 +43,7 @@ public class PathFollower3 : MonoBehaviour
         else if (transform.position == pathCreator2.path.GetPoint(0))
         {
             whichPath = 1;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator2.path.GetPoint(2))
         {
@@ -53,7 +53,7 @@ public class PathFollower3 : MonoBehaviour
         else if (transform.position == pathCreator3.path.GetPoint(0))
         {
             whichPath = 2;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator3.path.GetPoint(2))
         {
@@ -63,7 +63,7 @@ public class PathFollower3 : MonoBehaviour
         else if (transform.position == pathCreator4.path.GetPoint(0))
         {
             whichPath = 3;
-            dstTravelled = 36.5f;
+            dstTravelled = 65f;
         }
         else if (transform.position == pathCreator4.path.GetPoint(2))
         {
@@ -102,7 +102,7 @@ public class PathFollower3 : MonoBehaviour
         }
         else
         {
-            speed = 8;
+            speed = 12;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
